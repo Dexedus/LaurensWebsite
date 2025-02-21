@@ -1,0 +1,170 @@
+html{
+    height: 100%;
+}
+
+body{
+    padding-top: 110px;
+    height: 100%;
+    background-color: rgb(199, 199, 199)!important;
+}
+
+
+/*Header Styling*/
+header{
+    width: 100%;
+    height: 100%;
+}
+
+#header-container{
+    background-color: rgb(199, 199, 199)!important;
+    box-shadow: 0 0 7px rgba(0,0,0,0.5) !important;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#nav-bar{
+    font-size: 1.3em;
+}
+
+#dropdown-button-navbar{
+    font-size: 1em;
+    padding: 0;
+    border: none;
+}
+
+#logo{
+height: 75px;
+}
+
+.black{
+    color: #212529!important;
+}
+
+/*Fonts*/
+.fleur-de-leah-regular {
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/*Homepage Styling*/
+.carousel-inner, .carousel-outer {
+    height: 100%; /* Adjusts to 80% of the viewport height */
+
+}
+
+#carousel-title-div{
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#carousel-title-text{
+    font-size: 5em;
+    text-align: center;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 760px;
+    min-height: 300px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+#carousel-p-text{
+    font-size: larger;
+}
+
+#hero-outer{
+    overflow-x: hidden;
+    margin-top: 110px;
+}
+
+#jumbotron-outer{
+    background-color: rgb(90, 90, 90)!important;
+}
+
+#imageContainer{
+    position: relative;
+}
+
+#pictureSection{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+
+/*Media Queries*/
+@media (max-width: 768px) {
+    body{
+        padding-top: 201px;
+    }
+
+    #carousel-title-text{
+        font-size: 3.4em;
+        text-align: center;
+        margin-inline: 10px;
+    }
+
+    #carousel-p-text{
+        font-size: smaller;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    #carousel-title-text{
+        font-size: 3em;
+    }
+
+    #carousel-p-text{
+        font-size: small;
+    }
+    
+
+}
+
+@media (max-width: 405px) {
+    
+    body{
+        padding-top: 182px;
+    }
+
+    #carousel-title-text{
+        font-size: 2.5em;
+    }
+
+    #carousel-p-text{
+        font-size: small;
+    }
+
+    #nav-bar{
+        font-size: 0.9em;
+    }
+    
+
+}
+
+@media (max-width: 322px) {
+    
+    body{
+        padding-top: 220px;
+    }
+
+    
+
+}
