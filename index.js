@@ -34,8 +34,8 @@ app.get("/Portraits:D", (req, res) => {
     res.render("portraits.ejs")
 })
 
-app.get("/Streets:D!", (req, res) => {
-    res.render("streets.ejs")
+app.get("/Streets:D", (req, res) => {
+    res.render("street.ejs")
 })
 
 app.get("/Food:D", (req, res) => {

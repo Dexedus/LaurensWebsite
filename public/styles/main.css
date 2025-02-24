@@ -8,6 +8,9 @@ body{
     background-color: rgb(199, 199, 199)!important;
 }
 
+.linkDecoration{
+    text-decoration: none;
+}
 
 /*Header Styling*/
 header{
@@ -33,15 +36,35 @@ header{
     font-size: 1em;
     padding: 0;
     border: none;
+    transition: background-color;
+}
+.nav-link:hover{
+    background-color: rgb(199, 199, 199)!important;
+    color: #ffffff!important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: rgb(199, 199, 199)!important;
 }
 
 #logo{
-height: 75px;
+    height: 75px;
 }
 
 .black{
     color: #212529!important;
 }
+
+/*Component Classes*/
+.customButtonTerracota{
+    background-color: #E2725B!important; 
+    color: white!important;
+    transition: background-color 0.5s;
+}
+.customButtonTerracota:hover{
+    background-color: #C85C4D!important;
+}
+
 
 /*Fonts*/
 .fleur-de-leah-regular {
@@ -95,19 +118,84 @@ height: 75px;
 }
 
 #imageContainer{
+    overflow: hidden;
     position: relative;
 }
 
 #pictureSection{
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 500px;
     z-index: 1;
+    object-fit: cover;
 }
 
+.card-cover {
+    position: relative;
+    overflow: hidden;
+}
 
+.imageCard{
+    transition: 0.5s transform ;
+}
 
+#formContainer{
+    position: absolute; 
+    z-index: 3; 
+    top: 0px; 
+    left: 0px; 
+    height: 100%; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.card-cover:hover .imageCard{
+    transform: scale(1.1);
+}
+
+#formh1{
+    display: none;
+}
 
 /*Media Queries*/
+@media (max-width: 1400px) {
+    #h1{
+        font-size: 3em!important;
+    }
+    
+    #p{
+        font-size: 1.3em!important;
+    }
+}
+
+@media (max-width: 1200px) {
+    #h1{
+        font-size: 2.2em!important;
+    }
+
+    #p{
+        font-size: 1.1em!important;
+    }
+}
+
+@media (max-width: 992px) {
+    #h1, #p{
+        display: none;
+    }
+
+    #formh1{
+        display: block;
+        font-size: 1em!important;
+    }
+
+    #form{
+        margin-left: -220px!important;
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     body{
         padding-top: 201px;
@@ -122,6 +210,11 @@ height: 75px;
     #carousel-p-text{
         font-size: smaller;
     }
+
+    #form{
+        width: 240px;
+        height: 360px;
+    }
     
 }
 
@@ -133,6 +226,13 @@ height: 75px;
 
     #carousel-p-text{
         font-size: small;
+    }
+
+    #form{
+        position: absolute;
+        top: 50%!important;
+        left: 50%!important;
+        transform: translate(41.5%, -50%)!important;
     }
     
 
